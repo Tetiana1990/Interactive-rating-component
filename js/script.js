@@ -25,3 +25,4 @@ submitBtn.addEventListener("click", () =>{
 
 	thankYouCard.classList.remove("hidden");
 });
+console.log

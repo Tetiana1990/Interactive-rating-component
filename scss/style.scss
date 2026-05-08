@@ -1,0 +1,153 @@
+:root {
+	--Orange500: hsl(25, 97%, 53%);
+
+	--White: hsl(0, 100%, 100%);
+	--Grey500: hsl(217, 12%, 63%);
+	--Grey900: hsl(213, 19%, 18%);
+	--Grey950: hsl(216, 12%, 8%);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Overpass", sans-serif;
+	background: var(--Grey950);
+	color: var(--White);
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card {
+	background: var(--Grey900);
+	max-width: 360px;
+	padding: 2rem;
+	border-radius: 20px;
+}
+.icon-wrapper {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background: #2d3742;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+.icon-wrapper img {
+	width: 16px;
+	height: 16px;
+}
+h1,
+h2 {
+	margin-bottom: 1rem;
+	font-size: 28px;
+}
+p {
+	color: var(--Grey500);
+	font-size: 14px;
+	line-height: 1.6;
+}
+.ratings {
+	display: flex;
+	justify-content: space-between;
+	margin: 2rem 0;
+}
+.rating-btn {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #2d3742;
+	border: none;
+	color: var(--Grey500);
+	cursor: pointer;
+	transition: 0.3s;
+}
+.rating-btn:hover {
+	background: var(--Orange500);
+	color: var(--White);
+}
+.rating-btn:focus {
+	outline: 2x solid white;
+}
+.rating-btn.active {
+	background: #7c8798;
+	color: white;
+}
+#submit-btn {
+	width: 100%;
+	padding: 1rem;
+	border: none;
+	border-radius: 30px;
+	background: var(--Orange500);
+	color: var(--Grey950);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	cursor: pointer;
+	transition: 0.3s;
+	font-weight: 700;
+	margin-bottom: 2.5rem;
+}
+#submit-btn:hover {
+	background: var(--White);
+	color: var(--Orange500);
+}
+.hidden {
+	display: none;
+}
+#thank-you-card {
+	text-align: center;
+}
+.thank-you-img {
+	width: 150px;
+	margin-bottom: 1.5rem;
+}
+.selected-text {
+	background: #2d3742;
+	color: var(--Orange500);
+	padding: 0.5rem 1rem;
+	border-radius: 20px;
+	//display: inline-block;
+	margin-bottom: 1.5rem;
+	letter-spacing: 1.2px;
+}
+#selected-rating {
+	margin: 0 0.4rem;
+}
+.attribution {
+	margin-top: 2.5rem;
+	font-size: 0.7rem;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+	.card {
+		max-width: 420px;
+		padding: 2rem;
+	}
+	.rating-btn {
+		width: 55px;
+		height: 55px;
+	}
+}
+@media (min-width: 1024px) {
+	body {
+		padding: 2rem;
+	}
+	.card {
+		max-width: 450px;
+		padding: 2.5rem;
+	}
+	h1,
+	h2 {
+		font-size: 2rem;
+	}
+	p {
+		font-size: 1.1rem;
+	}
+}
